@@ -28,7 +28,7 @@ class Magazine
   end
 
   def contributors
-  
+    @@contributors
   end
 
   def self.all 
@@ -44,7 +44,7 @@ class Magazine
   end
 
   def contributing_authors
-    
+    @@contributors.filter {|contributor| contributor.articles > 2}
   end
 
 end
