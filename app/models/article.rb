@@ -10,11 +10,11 @@ class Article
     end
 
     def author
-        @author
+        @author.name
     end
 
     def magazine
-        @magazine
+        @magazine.name
     end
 
     def title

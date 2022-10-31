@@ -8,6 +8,7 @@ class Magazine
     @name = name
     @category = category
     @@magazines << self
+
   end
 
   def set_name (new_name)
@@ -27,7 +28,7 @@ class Magazine
   end
 
   def contributors
-    @contributors
+  
   end
 
   def self.all 
@@ -35,7 +36,7 @@ class Magazine
   end
 
   def self.find_by_name(name)
-
+    @@magazines.detect {|mag| mag.name === name}
   end
 
   def article_titles
