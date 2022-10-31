@@ -1,9 +1,12 @@
 class Article
     attr_accessor :author, :magazine, :title
+
+    @@articles = []
     def initialize (author = {}, magazine = {}, title = "")
         @author = author
         @magazine = magazine
         @title = title
+        @@articles << self
     end
 
     def author
@@ -19,6 +22,6 @@ class Article
     end
 
     def self.all
-
+        @@articles
     end
 end

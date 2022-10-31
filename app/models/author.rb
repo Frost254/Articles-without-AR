@@ -1,10 +1,11 @@
 class Author
   attr_accessor :name
-
+  @@articles = []
+  @@magazines = []
+  @@categories = []
 
   def initialize(name = "")
     @name = name
-  
   end
 
   def name 
@@ -12,14 +13,18 @@ class Author
   end
 
   def articles
-    @articles
+    @@articles
   end
 
   def magazines
-    @magazines.uniq
+    @@magazines.uniq
   end
 
   def add_article(magazine, title)
     
+  end
 
+  def topic_areas
+    @@categories.uniq
+  end
 end
